@@ -1,6 +1,6 @@
 package wire
 
-import "github.com/Alpa-1/goadb/internal/errors"
+import "github.com/Alpa-1/go-adb/internal/errors"
 
 const (
 	// The official implementation of adb imposes an undocumented 1-megabyte limit

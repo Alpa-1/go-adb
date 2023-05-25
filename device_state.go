@@ -1,6 +1,6 @@
 package adb
 
-import "github.com/Alpa-1/goadb/internal/errors"
+import "github.com/Alpa-1/go-adb/internal/errors"
 
 // DeviceState represents one of the 3 possible states adb will report devices.
 // A device can be communicated with when it's in StateOnline.

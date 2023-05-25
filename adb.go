@@ -4,8 +4,8 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Alpa-1/goadb/internal/errors"
-	"github.com/Alpa-1/goadb/wire"
+	"github.com/Alpa-1/go-adb/internal/errors"
+	"github.com/Alpa-1/go-adb/wire"
 )
 
 /*

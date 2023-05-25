@@ -7,8 +7,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/Alpa-1/goadb/internal/errors"
-	"github.com/Alpa-1/goadb/wire"
+	"github.com/Alpa-1/go-adb/internal/errors"
+	"github.com/Alpa-1/go-adb/wire"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 )

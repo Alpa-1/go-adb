@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/Alpa-1/goadb/internal/errors"
+	"github.com/Alpa-1/go-adb/internal/errors"
 )
 
 // Sender sends messages to the server.

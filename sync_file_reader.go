@@ -3,8 +3,8 @@ package adb
 import (
 	"io"
 
-	"github.com/Alpa-1/goadb/internal/errors"
-	"github.com/Alpa-1/goadb/wire"
+	"github.com/Alpa-1/go-adb/internal/errors"
+	"github.com/Alpa-1/go-adb/wire"
 )
 
 // syncFileReader wraps a SyncConn that has requested to receive a file.

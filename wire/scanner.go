@@ -6,7 +6,7 @@ import (
 	"io/ioutil"
 	"strconv"
 
-	"github.com/Alpa-1/goadb/internal/errors"
+	"github.com/Alpa-1/go-adb/internal/errors"
 )
 
 // TODO(zach): All EOF errors returned from networking calls should use ConnectionResetError.
