@@ -8,6 +8,7 @@ import (
 	"syscall"
 	"time"
 
+	"github.com/Alpa-1/go-adb"
 	"github.com/alecthomas/kingpin/v2"
 	"github.com/cheggaaa/pb"
 )
