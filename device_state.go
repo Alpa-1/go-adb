@@ -10,6 +10,7 @@ import "github.com/Alpa-1/go-adb/internal/errors"
 //go:generate stringer -type=DeviceState
 type DeviceState int8
 
+// https://android.googlesource.com/platform/packages/modules/adb/+/refs/heads/master/adb.cpp - line 115
 const (
 	StateInvalid DeviceState = iota
 	StateAuthorizing
@@ -18,6 +19,12 @@ const (
 	StateOffline
 	StateOnline
 	StateRecovery
+	StateBootloader
+	StateHost
+	StateRescue
+	StateSideload
+	StateConnecting
+	StateUnknown
 )
 
 var deviceStateStrings = map[string]DeviceState{
@@ -26,7 +33,13 @@ var deviceStateStrings = map[string]DeviceState{
 	"device":       StateOnline,
 	"unauthorized": StateUnauthorized,
 	"authorizing":  StateAuthorizing,
+	"bootloader":   StateBootloader,
+	"host":         StateHost,
+	"rescue":       StateRescue,
+	"sideload":     StateSideload,
+	"connecting":   StateConnecting,
 	"recovery":     StateRecovery,
+	"unknown":      StateUnknown,
 }
 
 func parseDeviceState(str string) (DeviceState, error) {
