@@ -6,6 +6,7 @@ import (
 	"os"
 	"os/exec"
 	"strings"
+	"syscall"
 
 	"github.com/Alpa-1/go-adb/internal/errors"
 	"github.com/Alpa-1/go-adb/wire"
@@ -139,6 +140,11 @@ var localFilesystem = &filesystem{
 		return isExecutable(path)
 	},
 	CmdCombinedOutput: func(name string, arg ...string) ([]byte, error) {
-		return exec.Command(name, arg...).CombinedOutput()
+		const CREATE_NO_WINDOW = 0x08000000
+		cmd := exec.Command(name, arg...)
+		cmd.SysProcAttr = &syscall.SysProcAttr{
+			CreationFlags: CREATE_NO_WINDOW,
+		}
+		return cmd.CombinedOutput()
 	},
 }
